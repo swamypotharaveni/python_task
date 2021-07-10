@@ -5,7 +5,9 @@ Create a virtual environment in which to install Python pip packages. With [virt
 virtualenv venv            # create a virtualenv
 source venv/bin/activate   # activate the Python virtualenv 
 ```
+## Project Installation
 
+To setup a local development environment:
 or with [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/),
 ```bash
 mkvirtualenv -p python3 {{project_name}}   # create and activate environment
