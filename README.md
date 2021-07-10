@@ -23,14 +23,28 @@ Clone GitHub Project
 cd project123
 Install development dependencies,
 ```bash
+
+
 pip install -r requirements.txt
 Migrate Databases
 bash
+
+
 python manage.py makemigrations
+
+
+
 python manage.py migrate
+
+
 Run the web application locally,
 ```bash
+
+
 python manage.py runserver # 127.0.0.1:8000
 Create Superuser,
 ```bash
+
+
+
 python manage.py createsuperuser
