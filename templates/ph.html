@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% include 'b_message/messges.html' %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+     <div class="row">
+      <div class="col-6">
+        {{ form.as_p}}
+      </div>
+     </div>
+  <button type="submit" class="btn btn-success">Save </button>
+</form>
+
+     <div id="book_table">
+            <table id="table" class="table table-bordered">
+                <thead class="alert-success">
+                <tr>
+
+      <th scope="col">name</th>
+      <th scope="col">email</th>
+      <th scope="col">phone number</th>
+      <th scope="col">age</th>
+      <th scope="col">gender</th>
+      <th scope="col">image</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for ph in pho %}
+    <tr>
+
+
+      <td>{{ ph.name }}</td>
+      <td>{{ ph.email }}</td>
+      <td>{{ ph.phone_number }}</td>
+      <td>{{ ph.age }}</td>
+      <td>{{ ph.gender }}</td>
+      <td ><img src="{{ ph.image.url}}" style="width:20px; height:20px"></td>
+        {% endfor %}
+    </tr>
+
+  </tbody>
+</table>
+     </div>
+{% endblock %}

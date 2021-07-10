@@ -1,0 +1,15 @@
+{% for message in messages %}
+    <div id="alert" class="alert {{ message.tags }} alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+ <script type="text/javascript">
+        setTimeout(function (){
+            if($('#alert').length>0){
+                $('#alert').remove();
+            }
+        },400)
+    </script>
+{% endfor %}
