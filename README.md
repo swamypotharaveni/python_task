@@ -1,5 +1,5 @@
 # python_task
-i am using ajax
+i am using ajax, python, django
 
 To setup a local development environment:
 
